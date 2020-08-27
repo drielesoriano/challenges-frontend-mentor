@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+html, body, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 75px 30px;
+  background-color: #E6EFF6;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+main {
+  max-width: 650px;
+  padding: 20px 20px;
+  margin: 0 auto;
+}
+
+.container section {
+  padding: 25px 40px 25px 40px;
+}
+
+div.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "us us" "price why";
+}
+
+/*Us Content - first box*/
+
+#us-content {
+  background-color: #ffffff;
+  border-radius: 5px 5px 0 0;
+  grid-area: us;
+}
+
+#us-content h1 {
+  font-weight: 700;
+  color: hsl(179, 62%, 43%);
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+#us-content h2 {
+  font-weight: 700;
+  color: hsl(71, 73%, 54%);
+  margin: 5px 0 0 0;
+  font-size: 1.1em;
+}
+
+#us-content p {
+  color: #B0B5BB;
+  line-height: 1.8;
+}
+
+/*Price Content - second box*/
+
+#price-content {
+  background-color: #2BB3B1;
+  border-radius: 0 0 0 5px;
+  color: white;
+  grid: price;
+}
+
+#price-block {
+  margin: 20px 0 10px 0;
+}
+
+#preco {
+  display: flex;
+  align-items: center;
+}
+
+#price-content #price {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1;
+  color: white;
+}
+
+#price-content #price-complement {
+  margin-left: 10px;
+  font-size: 1em;
+  color: white;
+  opacity: 0.5;
+}
+
+#price-content button {
+  background-color: hsl(71, 73%, 54%);
+  width: 100%;
+  margin-top: 23px;
+  padding: 13px;
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#price-content button:hover {
+  background-color: hsl(71, 69%, 47%);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.1s ease-in-out;
+}
+
+/*Advantage Content - third box*/
+
+#advantage-content {
+  background-color: #4ABEBD;
+  border-radius: 0 0 5px 0;
+  color: white;
+  grid-area: why;
+}
+
+#advantage-content ul {
+  margin: 20px 0 0 0;
+  list-style: none;
+}
+
+#advantage-content ul li {
+  font-weight: 400;
+  margin-top: 3px;
+  opacity: 0.6;
+}
+
+/*media query*/
+
+@media only screen and (max-width: 600px) {
+  div.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "us" "price" "why";
+  }
+
+  main {
+    padding: 0;
+  }
+
+  #price-content {
+    border-radius: 0;
+  }
+
+  #advantage-content {
+    border-radius: 0 0 5px 5px;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    color: hsl(179, 62%, 43%);
+    font-size: 1.7em;
+  }
+}
+
+/**/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

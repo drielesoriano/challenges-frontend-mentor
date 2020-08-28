@@ -1,0 +1,275 @@
+/*Realizado com auxilio do codigo https://github.com/darpots/fm_article-preview*/
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+html, body, ul, li, h1, h2, h3, h4, h5, h6, p, img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Box*/
+
+body {
+  background-color: #E9F0F6;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: hsl(214, 17%, 51%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  width: 730px;
+  margin: auto;
+}
+
+/*#container {
+  border-radius: 8px;
+  background-color: red;
+  display: flex;
+}*/
+
+#container {
+  height: 280px;
+  display: flex;
+  border-radius: 50px;
+  box-shadow: 15px 15px 15px -4px rgba(82, 111, 134, 0.1);
+}
+
+/*#box-content {
+  background-color: yellow;
+  border-radius: 0 8px 8px 0;
+  padding: 20px;
+}*/
+
+#geral-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  position: relative;
+  padding: 0 45px 0 40px;
+  border-radius: 0 8px 8px 0;
+  background-color: white;
+  /*box-shadow: 7px 7px 15px 0px rgba(82, 111, 134, 0.3);*/
+}
+
+/*img header*/
+
+.div-img {
+  /*box-shadow: 7px 7px 15px 0px rgba(82, 111, 134, 0.3);*/
+  min-width: 280px;
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+}
+
+.img-header {
+  height: 280px;
+}
+
+#box-content p {
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+/*.img-header {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px 0 0 8px;
+  object-fit: cover;
+}*/
+
+/* Author/Share Box*/
+
+.box-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*author box*/
+
+#info-author {
+  display: flex;
+}
+
+.profile-img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  align-self: center
+}
+
+.share-content {
+  background-color: hsl(210, 46%, 95%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2px;
+}
+
+/*social etc*/
+.share-content:hover {
+  fill: hsl(210, 46%, 95%);
+  background-color: #6e809769;
+  cursor: pointer;
+}
+
+.div-social-media {
+  display: none;
+  position: absolute;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 6px;
+  color: #969fb1;
+}
+
+.show {
+  display: block;
+}
+
+.icon-social {
+  background-color: #49556B;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  left: 198px;
+  top: 0px;
+
+  border-radius: 12px;
+  width: 250px;
+  height: 55px;
+  padding-left: 18px;
+}
+
+.icon-social:after {
+  position: absolute;
+  content: '';
+  border: 15px solid transparent;
+  border-top-color: #49556B;
+  top: 55px;
+}
+
+/*media queries*/
+
+@media only screen and (max-width: 600px) {
+  main {
+    height: 700px;
+    width: 470px;
+    margin-top: 72px;
+    margin: auto;
+  }
+  #container {
+    flex-direction: column;
+    width: 428px;
+    height: 500px;
+    border-radius: 50px;
+    box-shadow: 15px 15px 15px -4px rgba(82, 111, 134, 0.1);
+  }
+  #geral-content {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 40px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .div-img {
+    min-width: 480px;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+  }
+
+  .img-header {
+    height: 342px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .box-footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .icon-social{
+    left: -30px;
+    top: 36px;
+    border-radius: 0 0 8px 8px;
+    height: 70px;
+    width: 310px;
+    padding-right: 100px;
+  }
+
+  .icon-social:after {
+    display: none;
+  }
+
+  .share-content {
+    z-index: 999;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+  main {
+    height: 700px;
+    width: 370px;
+    margin-top: 72px;
+    margin: auto;
+  }
+  #container {
+    flex-direction: column;
+    width: 328px;
+    height: 500px;
+    border-radius: 50px;
+    box-shadow: 15px 15px 15px -4px rgba(82, 111, 134, 0.1);
+  }
+  #geral-content {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 40px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+  .div-img {
+    min-width: 280px;
+    border-radius: 8px 8px 0 0;
+    
+  }
+
+  .img-header {
+    height: 262px;
+  }
+  
+  .box-footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .share-content {
+    z-index: 999;
+  }
+  .icon-social{
+    left: -30px;
+    top: 70px;
+    border-radius: 0 0 8px 8px;
+    height: 70px;
+    width: 210px;
+    padding-right: 100px;
+  }
+
+  .icon-social:after {
+    display: none;
+  }
+}

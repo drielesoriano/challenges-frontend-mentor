@@ -1,36 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="style.css">
+
   <title>Frontend Mentor | Article preview component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <main>
+    <div id="container">
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+      <!-- Imagem Head-->
+      <div class="div-img">
+        <img class="img-header" src="./images/drawers.jpg" alt="">
+      </div>
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
 
-  Michelle Appleton
-  28 Jun 2020
+      <div id="geral-content">
 
-  Share
-  
+        <!-- Content Box-->
+        <div id="box-content">
+          <h2>Shift the overall look and feel by adding these wonderful
+            touches to furniture in your home</h2>
+
+          <p>Ever been in a room and felt like something was missing? Perhaps
+            it felt slightly bare and uninviting. I’ve got some simple tips
+            to help you make any room feel complete.</p>
+        </div>
+
+        <!--Footer Box-->
+        <div class="box-footer">
+
+          <!--Author Box-->
+          <div id="info-author">
+            <img class="profile-img" src="./images/avatar-michelle.jpg" alt="Michelle Appleton">
+            <div>
+              <h4>Michelle Appleton</h4>
+              <p>28 Jun 2020</p>
+            </div>
+          </div>
+
+
+          <!--Share Box-->
+          <div class="share-content" onclick="toggleShare()">
+            <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+              <path fill="#6E8098"
+                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+            </svg>
+          </div>
+        </div>
+
+        <!--Social Media Box-->
+        <div class="div-social-media">
+          <div class="icon-social">
+            <p>SHARE</p>
+            <a href="#">
+              <img src="./images/icon-facebook.svg" alt="Facebook">
+            </a>
+            <a href="#">
+              <img src="./images/icon-twitter.svg" alt="Twitter">
+            </a>
+            <a href="#">
+              <img src="./images/icon-pinterest.svg" alt="Pinterest">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/drielesoriano/">Dri S</a>.
   </div>
+
+  <script src="scripts.js"></script>
 </body>
+
 </html>

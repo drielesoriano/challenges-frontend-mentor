@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+html, body, ul, li, h1, h2, h3, h4, h5, h6, p, img, span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*boxes*/
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: url(./images/pattern-curve.svg), url(./images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom, 90% center;
+  /*padding-right: 62px;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 1111px;
+}
+
+/*#testimonial-card {
+display: none;
+}*/
+
+.content-div {
+  flex-direction: column;
+  position: absolute;
+  margin-top: 170px;
+  z-index: 1000;
+}
+
+.content-div::before {
+  content: '';
+  background-image: url(./images/pattern-quotes.svg);
+  position: absolute;
+  width: 120px;
+  height: 100px;
+  top: -65px;
+  left: 100px;
+}
+
+/**/
+
+p {
+  max-width: 50%;
+  font-size: 32px;
+  font-weight: 300;
+  color: #282540;
+  line-height: 1.4;
+  margin-bottom: 50px;
+}
+
+.author-info {
+  display: flex;
+  font-size: 26px;
+}
+
+#label-author {
+  font-weight: 700;
+  color: #232146;
+}
+
+#label-ocupation {
+  font-weight: 300;
+  color: #bab8c5;
+  margin-left: 10px;
+}
+
+.author-img {
+  float: right;
+}
+
+img {
+  max-width: 540px;
+  border-radius: 10px;
+  position: relative;
+  bottom: -2.1rem;
+  /*left: 8.5rem;
+  border: 2px red solid;*/
+  box-shadow: 3px 25px 50px 0px rgba(71, 71, 71, 0.2);
+}
+
+.slider-box {
+  position: absolute;
+  display: inline;
+  bottom: 175px;
+  right: 530px;
+  font-size: 0;
+  box-shadow: 3px 5px 10px 0px rgba(71, 71, 71, 0.17);
+  border-radius: 50px;
+}
+
+.slider-box button {
+  width: 56px;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+  
+}
+
+button#next {
+  border-radius: 0 40px 40px 0;
+}
+
+button#prev {
+  border-radius: 40px 0 0 40px;
+}
+
+slider-box button:hover {
+  background-color: red;
+}

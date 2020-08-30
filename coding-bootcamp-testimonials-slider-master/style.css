@@ -56,12 +56,13 @@ p {
   font-weight: 300;
   color: #282540;
   line-height: 1.4;
-  margin-bottom: 50px;
+  
 }
 
 .author-info {
   display: flex;
   font-size: 26px;
+  margin-top: 50px;
 }
 
 #label-author {
@@ -138,5 +139,72 @@ button#prev {
   .slider-box {
     bottom: 8px;
     right: 200px;
+  }
+}
+
+@media (max-width:768px) {
+  body {
+    margin: 0 auto;
+    color: red;
+    background-position: left bottom, center 25px;
+    background-size: 100%, 325px;
+  }
+
+  main {
+    width: 350px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-div {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    top: 255px;
+    right: 35px;
+  }
+
+  .content-div::before{
+    background-size: 60px;
+    background-repeat: no-repeat;
+    top: -23px;
+    left: 122px;
+  }
+
+  p {
+    max-width: 310px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #282540;
+    line-height: 1.4;
+  }
+
+  .author-info {
+    display: block;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+
+  #author-img {
+    top: -80px;
+    margin: auto;
+    width: 254px;
+    box-shadow: 3px 14px 15px 0px rgba(71, 71, 71, 0.12);
+  }
+
+  .slider-box {
+    bottom: 295px;
+    right: 150px;
+  }
+
+  .slider-box button {
+    width: 40px;
+    padding: 10px;
+
   }
 }

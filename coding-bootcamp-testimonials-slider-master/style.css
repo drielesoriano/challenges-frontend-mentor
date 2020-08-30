@@ -75,7 +75,7 @@ p {
   margin-left: 10px;
 }
 
-.author-img {
+#author-img {
   float: right;
 }
 
@@ -103,10 +103,13 @@ img {
   width: 56px;
   padding: 20px;
   border: none;
-  cursor: pointer;
   outline: none;
   background-color: white;
-  
+}
+
+.slider-box button:hover {
+  cursor: pointer;
+  background-color: rgb(235, 235, 235);
 }
 
 button#next {
@@ -117,6 +120,23 @@ button#prev {
   border-radius: 40px 0 0 40px;
 }
 
-slider-box button:hover {
+.slider-box button:hover {
   background-color: red;
+}
+
+@media screen and (max-width: 1366px) {
+  body {
+    padding-bottom: 50px;
+  }
+  main {
+    width: 1000px;
+  }
+  .author-info {
+    display: flex;
+    font-size: 16px;
+  }
+  .slider-box {
+    bottom: 8px;
+    right: 200px;
+  }
 }

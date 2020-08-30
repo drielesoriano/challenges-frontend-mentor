@@ -27,14 +27,13 @@
   </style>
 </head>
 
-<body>
+<body onload="slide()">
 
   <main>
 
     <div id="testimonial-card">
-
       <div>
-        <img class="author-img" src="./images/image-tanya.jpg" alt="Tanya Sinclair">
+        <img id="author-img" src="./images/image-tanya.jpg" alt="Tanya Sinclair">
       </div>
 
       <div class="slider-box">
@@ -49,7 +48,7 @@
       </div>
 
       <div class="content-div">
-        <p>“ I’ve been interested in coding for a while but never taken the jump, until now.
+        <p id="quote">“ I’ve been interested in coding for a while but never taken the jump, until now.
           I couldn’t recommend this course enough. I’m now in the job of my dreams and so
           excited about the future. ”</p>
         <div class="author-info">
@@ -57,8 +56,6 @@
           <div id="label-ocupation">UX Engineer</div>
         </div>
       </div>
-
-
     </div>
 
     <!--
@@ -80,6 +77,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="scripts.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,6 @@ body {
   font-size: 15px;
   font-family: 'Poppins', sans-serif;
   background-color: #fbf9fa;
-  
 }
 
 .container {
@@ -17,11 +16,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 #header {
   width: 545px;
-  margin-top: 50px;
   margin-bottom: 35px;
   text-align: center;
 }
@@ -41,13 +42,16 @@ body {
   font-size: 0.8em;
   line-height: 1.8em;
 }
+
 /*Boxes*/
 
 #cards {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "box1 box2 box4" "box1 box3 box4";
   align-items: center;
-  position: relative;
 }
 
 .card-content {
@@ -62,24 +66,27 @@ body {
   box-shadow: 0px 8px 8px 0px hsla(212, 49%, 46%, 0.15);
   background: white;
   position: relative;
-
   color: hsl(229, 6%, 66%);
 }
 
 .border-cyan {
   border-top: 3px hsl(180, 62%, 55%) solid;
+  grid-area: box1;
 }
 
 .border-red {
   border-top: 3px hsl(0, 78%, 62%) solid;
+  grid-area: box2;
 }
 
 .border-orange {
   border-top: 3px hsl(34, 97%, 64%) solid;
+  grid-area: box3;
 }
 
 .border-blue {
   border-top: 3px hsl(212, 86%, 64%) solid;
+  grid-area: box4;
 }
 
 #cards p {
@@ -96,4 +103,26 @@ body {
   bottom: 0;
   right: 0;
   padding: 10px 20px;
+}
+
+@media (max-width: 675px) {
+  #header {
+    width: 90vw;
+  }
+  #title, #subtitle {
+    font-size: 1.5em;
+  }
+  #subtitle {
+    margin-bottom: 20px;
+  }
+  #cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "box1" "box2" "box3" "box4";
+  }
+  .card-content {
+    flex-direction: column;
+    width: 75vw;
+  }
 }
